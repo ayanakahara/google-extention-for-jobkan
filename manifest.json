@@ -1,0 +1,26 @@
+{
+  "name": "calculator for Jobkan",
+  "version": "1",
+  "manifest_version": 2,
+  "description": "This is calculator for Jobkan.",
+  "content_scripts": [{
+    "matches": ["https://*.jobcan.jp/employee/attendance"],
+    "run_at": "document_end",
+    "js": ["calc.js"],
+    "all_frames": true
+  }],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  }
+}

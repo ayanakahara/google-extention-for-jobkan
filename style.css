@@ -1,0 +1,15 @@
+.c-avatar,
+.member_details .member_image {
+    display: none !important;
+}
+
+.c-message__sender_link {
+    color: #616161 !important;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+    margin-left: -1rem;
+}
+
+.slack_menu_header .member_image {
+    display: none;
+}
