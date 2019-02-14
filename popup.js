@@ -1,7 +1,8 @@
 // backgroundで受け取った値を取得
 function logBackgroundValue () {
-    var test = chrome.extension.getBackgroundPage().test_value;
-    reflectPopup(test);
+    var result = chrome.extension.getBackgroundPage().result_value;
+    console.log(result)
+    reflectPopup(result);
     // return;
 }
 
@@ -15,19 +16,13 @@ function sendToContents(){
     });    
 }
 
-function reflectPopup(test){
-    let popupResult = document.querySelector('.result');//251
-    if(test[0]> test[1]){
-        let resultHour = Math.floor((test[0]- test[1])/60);
-        let resultMinites = Math.abs((test[0]- test[1])% 60);
-        popupResult.innerHTML= resultHour +":"+ resultMinites; //4:11
-        document.querySelector('.over').classList.add('active');
+function reflectPopup(result){
+    let popupResult = document.querySelector('.result');
+    if(result[2]=== 1){
+        popupResult.innerHTML= "+"+result[0] +":"+ result[1]; //4:11
     }
-    if(test[0]< test[1]){
-        let resultHour = Math.floor((test[1]- test[0])/60);
-        let resultMinites = Math.abs((test[1]- test[0])% 60);
-        popupResult.innerHTML= "-"+resultHour +":"+ resultMinites; //-4:11
-        document.querySelector('.slow').classList.add('active');
+    if(result[2]=== -1){
+        popupResult.innerHTML= "-"+result[0] +":"+ result[1]; //4:11
     }
 }
     

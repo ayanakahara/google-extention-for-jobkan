@@ -1,23 +1,40 @@
+body {
+    margin: 0 auto;
+    width: 250px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #eee;
+    height: 5em;;
+}
+
 button{
+    margin: 1em auto;
     appearance: none;
     outline: 0;
-    background-color: #fff;
+    background-color: #333;
     border: 0;
     padding: 10px 15px;
     color: #53e3a6;
     border-radius: 3px;
-    border: 1px solid #53e3a6;
-    width: 250px;
+    width: 200px;
     cursor: pointer;
     font-size: 18px;
     transition-duration: 0.25s;
+    display: flex;
+    justify-content: center;
 }
 
 button:hover{
-    background-color: rgb(245, 247, 249);
+    opacity: .8;
 }
 
 .result {
+    margin: 1em 0;
     opacity: 0;
     text-align: center;
     color: #666;
@@ -30,6 +47,7 @@ button:hover{
     opacity: 0;
     transform: scale(0.8);
     animation: .3s fadeOut ease-in;
+    display: none;
 }
 
 .message_wrapper {

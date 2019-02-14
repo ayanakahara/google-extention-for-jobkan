@@ -13,3 +13,9 @@
 .slack_menu_header .member_image {
     display: none;
 }
+
+.header {
+    text-align: center;
+    background-color: #333;
+    color: #eee;
+}
